@@ -14,6 +14,7 @@
         url = "github:catppuccin/nix";
         inputs.nixpkgs.follows = "nixpkgs";
   };
+};
 
   outputs = { self, nixpkgs, home-manager, catppuccin, ... }: {
     nixosConfigurations.nixlaptop = nixpkgs.lib.nixosSystem {
