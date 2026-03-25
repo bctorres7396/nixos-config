@@ -21,11 +21,11 @@
       modules = [
         ./hosts/nixlaptop/configuration.nix
         home-manager.nixosModules.home-manager
+        catppuccin.homeManagerModules.catppuccin
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.ben = import ./home/ben.nix;
-          catppuccin.homeManagerModules.catppuccin
         }
       ];
      };
