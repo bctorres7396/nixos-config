@@ -101,7 +101,6 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  networking.networkmanager.enable = true;
   systemd.services."NetworkManager-wait-online".enable = false;
   
   # Open ports in the firewall.
