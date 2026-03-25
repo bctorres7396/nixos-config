@@ -64,7 +64,7 @@
 
   style = ''
     * {
-      font-family = "JetBrainsMono Nerd Font";
+      font-family: "JetBrainsMono Nerd Font";
       font-size: 13px;
     }
 
