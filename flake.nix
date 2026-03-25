@@ -9,10 +9,13 @@
       home-manager = {
         url = "github:nix-community/home-manager";
         inputs.nixpkgs.follows = "nixpkgs";
-      };
+
+      catppuccin = {
+        url = "github:catppuccin/nix";
+        inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, catppuccin, ... }: {
     nixosConfigurations.nixlaptop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -22,6 +25,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.ben = import ./home/ben.nix;
+          catppuccin.homeManagerModules.catppuccin
         }
       ];
      };
