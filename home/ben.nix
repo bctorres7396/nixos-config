@@ -6,6 +6,9 @@
     home.stateVersion = "25.11";
   
     programs.home-manager.enable = true;
+
+      catppuccin.enable = true;
+      catppuccin.flavor = "mocha";
       wayland.windowManager.hyprland = {
         enable = true;
         settings = {
