@@ -1,20 +1,17 @@
+{
+  description = "Ben's NixOS config";
 
-
-  {
-    description = "Ben's NixOS config";
-
-    inputs = {
-      nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-      home-manager = {
-        url = "github:nix-community/home-manager";
-        inputs.nixpkgs.follows = "nixpkgs";
-
-      catppuccin = {
-        url = "github:catppuccin/nix";
-        inputs.nixpkgs.follows = "nixpkgs";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-};
 
   outputs = { self, nixpkgs, home-manager, catppuccin, ... }: {
     nixosConfigurations.nixlaptop = nixpkgs.lib.nixosSystem {
@@ -29,6 +26,6 @@
           home-manager.users.ben = import ./home/ben.nix;
         }
       ];
-     };
     };
-  }
+  };
+}
