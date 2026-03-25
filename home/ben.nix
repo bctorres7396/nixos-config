@@ -33,5 +33,9 @@
        brightnessctl
        pamixer
        networkmanagerapplet
+       nerd-fonts.jetbrains-mono
+       nerd-fonts.fira-code
      ];
+     
+     fonts.fontconfig.enable = true;
   }
