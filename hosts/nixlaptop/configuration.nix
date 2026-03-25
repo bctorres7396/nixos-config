@@ -88,6 +88,16 @@
   # };
 
   # List services that you want to enable:
+    services.greetd = {
+      enable = true;
+      settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        user = "greeter";
+      };
+     };
+    };
+    
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
@@ -119,7 +129,8 @@
   # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
   # and migrated your data accordingly.
   #
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
+  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion
+ .
   environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.11"; # Did you read the comment?
