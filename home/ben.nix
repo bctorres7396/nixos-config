@@ -10,6 +10,7 @@
         enable = true;
         settings = {
           monitor = ",1920x1080, auto, 1";
+          exec-once = [ "waybar" ];
           bind = [
             "SUPER, Return, exec, kitty"
             "SUPER, Q, killactive"
