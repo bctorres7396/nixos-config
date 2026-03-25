@@ -29,33 +29,81 @@
     mainBar = {
       layer = "top";
       position = "top";
-      height = 30;
+      height = 34;
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "battery" "network" "pulseaudio" ];
+      modules-right = [ "pulseaudio" "network" "battery" ];
 
       clock = {
-        format = "{:%H:%M}";
+        format = " {:%H:%M}";
         tooltip = false;
       };
 
       battery = {
-        format = "BAT {capacity}%";
+        format = " {capacity}%";
         tooltip = false;
       };
 
       network = {
-        format-wifi = "WiFi {signalStrength}%";
-        format-disconnected = "No Network";
+        format-wifi = " {signalStrength}%";
+        format-disconnected = "disconnected";
         tooltip = false;
       };
 
       pulseaudio = {
-        format = "VOL {volume}%";
+        format = " {volume}%";
         tooltip = false;
+      };
+
+      "hyprland/workspaces" = {
+        format = "{id}";
+        on-click = "activate";
       };
     };
   };
+
+  style = ''
+    * {
+      font-family = "JetBrainsMono Nerd Font";
+      font-size: 13px;
+    }
+
+    window#waybar {
+      background-color: #1e1e2e;
+      color: #cdd6f4;
+      border-bottom: 2px solid #313244;
+    }
+
+    #workspaces button {
+      padding: 0 8px;
+      color: #6c7086;
+    }
+
+    #workspaces button.active {
+      color: #89b4fa;
+      border-bottom: 2px solid #89b4fa;
+    }
+
+    #clock {
+      color: #a6e3a1;
+      padding: 0 12px;
+    }
+
+    #battery {
+      color: #f9e2af;
+      padding: 0 12px;
+    }
+
+    #network {
+      color: #89dceb;
+      padding: 0 12px;
+    }
+
+    #pulseaudio {
+      color: #f5c2e7;
+      padding: 0 12px;
+    }
+  '';
 };
 
      home.packages = with pkgs; [
