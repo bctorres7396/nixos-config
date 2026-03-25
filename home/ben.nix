@@ -8,6 +8,14 @@
     programs.home-manager.enable = true;
       wayland.windowManager.hyprland = {
         enable = true;
+        settings = {
+          bind = [
+            "SUPER, Return, exec, kitty"
+            "SUPER, Q, killactive"
+            "SUPER, M, exit"
+            "SUPER, Space, exec, wofi --show drun"
+          ];
+        };
       };
 
      home.packages = with pkgs; [
