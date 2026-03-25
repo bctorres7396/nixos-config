@@ -23,8 +23,13 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.ben = import ./home/ben.nix;
-        }
+          home-manager.users.ben = {
+            imports = [
+              ./home/ben.nix
+              catppuccin.homeManagerModules.catppuccin
+            ];
+        };
+       }
       ];
     };
   };
