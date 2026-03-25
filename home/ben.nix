@@ -19,6 +19,41 @@
         };
       };
 
+     programs.waybar = {
+  enable = true;
+  settings = {
+    mainBar = {
+      layer = "top";
+      position = "top";
+      height = 30;
+      modules-left = [ "hyprland/workspaces" ];
+      modules-center = [ "clock" ];
+      modules-right = [ "battery" "network" "pulseaudio" ];
+
+      clock = {
+        format = "{:%H:%M}";
+        tooltip = false;
+      };
+
+      battery = {
+        format = "BAT {capacity}%";
+        tooltip = false;
+      };
+
+      network = {
+        format-wifi = "WiFi {signalStrength}%";
+        format-disconnected = "No Network";
+        tooltip = false;
+      };
+
+      pulseaudio = {
+        format = "VOL {volume}%";
+        tooltip = false;
+      };
+    };
+  };
+};
+
      home.packages = with pkgs; [
        kitty
        wofi
