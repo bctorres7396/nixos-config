@@ -26,7 +26,7 @@
           home-manager.users.ben = {
             imports = [
               ./home/ben.nix
-              catppuccin.homeManagerModules.catppuccin
+              catppuccin.homeModules.catppuccin
             ];
         };
        }
