@@ -31,6 +31,8 @@
     starship
     spotify
     fastfetch
+    thunar
+    xdg-utils
   ];
 
   fonts.fontconfig.enable = true;
@@ -73,6 +75,7 @@
         ",XF86AudioMute, exec, pamixer -t"
         ",XF86MonBrightnessUp, exec, brightnessctl set 10%+"
         ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+        "SUPER, E, exec, thunar"
       ];
       decoration = {
         rounding = 10;
