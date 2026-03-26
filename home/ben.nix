@@ -83,6 +83,70 @@
     };
   };
 
+  programs.kitty = {
+  enable = true;
+  settings = {
+    font_size = "12.0";
+    background_opacity = "0.95";
+    background = "#1e1e2e";
+    foreground = "#cdd6f4";
+    cursor = "#f5e0dc";
+    selection_background = "#313244";
+    color0 = "#45475a";
+    color1 = "#f38ba8";
+    color2 = "#a6e3a1";
+    color3 = "#f9e2af";
+    color4 = "#89b4fa";
+    color5 = "#f5c2e7";
+    color6 = "#94e2d5";
+    color7 = "#bac2de";
+    color8 = "#585b70";
+    color9 = "#f38ba8";
+    color10 = "#a6e3a1";
+    color11 = "#f9e2af";
+    color12 = "#89b4fa";
+    color13 = "#f5c2e7";
+    color14 = "#94e2d5";
+    color15 = "#a6adc8";
+  };
+};
+
+  programs.starship = {
+  enable = true;
+  settings = {
+    format = "$username$directory$git_branch$git_status$cmd_duration$line_break$character";
+
+    username = {
+      show_always = true;
+      format = "[$user]($style) ";
+      style_user = "bold purple";
+    };
+
+    directory = {
+      format = "[$path]($style) ";
+      style = "bold blue";
+      truncation_length = 3;
+    };
+
+    git_branch = {
+      format = "[$symbol$branch]($style) ";
+      style = "bold pink";
+    };
+
+    character = {
+      success_symbol = "[❯](bold green)";
+      error_symbol = "[❯](bold red)";
+    };
+
+    cmd_duration = {
+      min_time = 500;
+      format = "[$duration]($style) ";
+      style = "bold yellow";
+    };
+  };
+};
+
+
   style = ''
     * {
       font-family: "JetBrainsMono Nerd Font";
@@ -144,6 +208,9 @@
        nerd-fonts.jetbrains-mono
        nerd-fonts.fira-code
        swww
+       starship
+       spotify
+       fastfetch
      ];
      
      fonts.fontconfig.enable = true;
