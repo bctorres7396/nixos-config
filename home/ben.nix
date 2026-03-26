@@ -52,6 +52,8 @@
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
+        col.active_border = "rgb(89b4fa) rgb(cba6f7) 45deg";
+        col.inactive_border = "rgb(313244)";
       };
       input = {
         kb_layout = "us";
