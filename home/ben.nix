@@ -132,6 +132,7 @@
        networkmanagerapplet
        nerd-fonts.jetbrains-mono
        nerd-fonts.fira-code
+       swww
      ];
      
      fonts.fontconfig.enable = true;
