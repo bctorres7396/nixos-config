@@ -34,6 +34,12 @@
              "SUPER SHIFT, 3, movetoworkspace, 3"
              "SUPER SHIFT, 4, movetoworkspace, 4"
              "SUPER SHIFT, 5, movetoworkspace, 5"
+             
+             ",XF86AudioRaiseVolume, exec, pamixer -i 5"
+             ",XF86AudioLowerVolume, exec, pamixer -d 5"
+             ",XF86AudioMute, exec, pamixer -t"
+             ",XF86MonBrightnessUp, exec, brightnessctl set 10%+"
+             ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
           ];
         };
       };
