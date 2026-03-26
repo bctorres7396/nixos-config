@@ -211,4 +211,45 @@
   programs.zsh = {
     enable = true;
   };
+
+  programs.wofi = {
+  enable = true;
+  style = ''
+    window {
+      background-color: #1e1e2e;
+      border: 2px solid #313244;
+      border-radius: 10px;
+    }
+    #input {
+      background-color: #313244;
+      color: #cdd6f4;
+      border: none;
+      border-radius: 5px;
+      padding: 8px;
+      margin: 8px;
+    }
+    #inner-box {
+      background-color: #1e1e2e;
+    }
+    #outer-box {
+      padding: 8px;
+    }
+    #entry {
+      padding: 8px;
+      border-radius: 5px;
+      color: #cdd6f4;
+    }
+    #entry:selected {
+      background-color: #313244;
+      color: #89b4fa;
+    }
+    #text {
+      color: #cdd6f4;
+    }
+    #text:selected {
+      color: #89b4fa;
+    }
+  '';
+};  
+
 }
