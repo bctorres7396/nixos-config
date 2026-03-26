@@ -82,6 +82,7 @@
       };
     };
   };
+  };
 
   programs.kitty = {
   enable = true;
