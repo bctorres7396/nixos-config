@@ -281,13 +281,6 @@
   '';
 };  
 
-   programs.wofi = {
-    enable = true;
-    style = ''
-      ...
-    '';
-  };
-
   programs.swaylock = {
     enable = true;
     settings = {
