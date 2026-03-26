@@ -13,7 +13,7 @@
         enable = true;
         settings = {
           monitor = ",1920x1080, auto, 1";
-          exec-once = [ "waybar &" ];
+          exec-once = [ "waybar &" "hyprpaper &" ];
           bind = [
             "SUPER, Return, exec, kitty"
             "SUPER, Q, killactive"
@@ -33,6 +33,13 @@
         };
       };
 
+      services.hyprpaper = {
+      enable = true;
+      settings = {
+      preload = [ "~/.config/hyprpaper/wallpaper.jpg" ];
+      wallpaper = [ ",~/.config/hyprpaper/wallpaper.jpg" ];
+    };
+  };
      programs.waybar = {
   enable = true;
   settings = {
