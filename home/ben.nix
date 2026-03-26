@@ -33,6 +33,8 @@
     fastfetch
     thunar
     xdg-utils
+    swaylock
+    wlogout
   ];
 
   fonts.fontconfig.enable = true;
@@ -78,6 +80,8 @@
         "SUPER, E, exec, thunar"
         "SUPER, P, exec, grim -g \"$(slurp)\" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png"
         "SUPER, Z, exec, grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png"
+        "SUPER, L, exec, swaylock"
+        "SUPER, X, exec, wlogout"
       ];
       decoration = {
         rounding = 10;
@@ -276,5 +280,24 @@
     }
   '';
 };  
+
+   programs.wofi = {
+    enable = true;
+    style = ''
+      ...
+    '';
+  };
+
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      color = "1e1e2e";
+      font-size = 24;
+      indicator-idle-visible = false;
+      indicator-radius = 100;
+      ring-color = "89b4fa";
+      show-failed-attempts = true;
+    };
+  };
 
 }
