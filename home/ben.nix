@@ -77,7 +77,7 @@
         ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
         "SUPER, E, exec, thunar"
         "SUPER, P, exec, grim -g \"$(slurp)\" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png"
-        "SUPER, F10, exec, grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png"
+        "SUPER, Z, exec, grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png"
       ];
       decoration = {
         rounding = 10;
