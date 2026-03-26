@@ -33,13 +33,6 @@
         };
       };
 
-      services.hyprpaper = {
-      enable = true;
-      settings = {
-      preload = [ "~/.config/hyprpaper/wallpaper.jpg" ];
-      wallpaper = [ ",~/.config/hyprpaper/wallpaper.jpg" ];
-    };
-  };
      programs.waybar = {
   enable = true;
   settings = {
