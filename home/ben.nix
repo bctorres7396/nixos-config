@@ -35,6 +35,9 @@
     xdg-utils
     swaylock
     wlogout
+    vlc
+    discord
+    telegram
   ];
 
   fonts.fontconfig.enable = true;
