@@ -126,7 +126,9 @@
         modules-right = [ "pulseaudio" "network" "battery" ];
         clock = {
           format = " {:%H:%M}";
-          tooltip = false;
+          format-alt = " {:%A, %B %d, %Y}";
+          tooltip = true;
+          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         };
         battery = {
           format = " {capacity}%";
@@ -171,6 +173,8 @@
       #clock {
         color: #a6e3a1;
         padding: 0 12px;
+        font-size: 16px;
+        font-weight: bold;
       }
       #battery {
         color: #f9e2af;
