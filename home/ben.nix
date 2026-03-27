@@ -319,4 +319,11 @@
   };
 };
 
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+    gtk-theme = "Catppuccin-Mocha-Standard-Blue-Dark";
+    color-scheme = "prefer-dark";
+  };
+};
+   
 }
