@@ -44,6 +44,9 @@
     swaynotificationcenter
     swayidle
     libnotify
+    catppuccin-gtk
+    gnome-themes-extra
+    papirus-icon-theme
   ];
 
   fonts.fontconfig.enable = true;
@@ -300,4 +303,22 @@
   '';
 };  
 
+    gtk = {
+      enable = true;
+      theme = {
+        name = "Catppuccin-Mocha-Standard-Blue-Dark";
+        package = pkgs.catppuccin-gtk.override {
+          accents = [ "blue" ];
+          variant = "mocha";
+    };
+  };
+  iconTheme = {
+    name = "Papirus-Dark";
+    package = pkgs.papirus-icon-theme;
+  };
+  cursorTheme = {
+    name = "Catppuccin-Mocha-Dark-Cursors";
+    package = pkgs.catppuccin-cursors.mochaDark;
+  };
+};
 }
