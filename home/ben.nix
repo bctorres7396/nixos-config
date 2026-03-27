@@ -61,6 +61,9 @@
         "waybar"
         "swaync"
         "swayidle -w timeout 300 'swaylock' timeout 600 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'"
+        "gsettings set org.gnome.desktop.interface gtk-theme 'Catpupuccin-Mocha-Standard-Blue-Dark'"
+        "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+
       ];
       general = {
         gaps_in = 5;
