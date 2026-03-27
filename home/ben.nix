@@ -41,7 +41,7 @@
     discord
     btop
     obsidian
-    mako
+    dunst
     libnotify
   ];
 
@@ -55,7 +55,7 @@
         "swww-daemon"
         "sleep 1 && swww img /home/ben/.config/hyprpaper/wallpaper.jpg --transition-type wipe --transition-duration 2"
         "waybar"
-        "mako"
+        "dunst"
       ];
       general = {
         gaps_in = 5;
@@ -295,16 +295,5 @@
     }
   '';
 };  
-
-  services.mako = {
-    enable = true;
-    backgroundColor = "#1e1e2e";
-    borderColor = "#89b4fa";
-    textColor = "#cdd6f4";
-    borderRadius = 10;
-    borderSize = 2;
-    defaultTimeout = 5000;
-    font = "JetBrainsMono Nerd Font 12";
-  };
 
 }
