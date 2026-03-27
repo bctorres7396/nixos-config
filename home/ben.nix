@@ -42,6 +42,7 @@
     btop
     obsidian
     swaynotificationcenter
+    swayidle
     libnotify
   ];
 
@@ -56,6 +57,7 @@
         "sleep 1 && swww img /home/ben/.config/hyprpaper/wallpaper.jpg --transition-type wipe --transition-duration 2"
         "waybar"
         "swaync"
+        "swayidle -w timeout 300 'swaylock' timeout 600 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'"
       ];
       general = {
         gaps_in = 5;
