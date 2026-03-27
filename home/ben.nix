@@ -46,7 +46,6 @@
     libnotify
     catppuccin-gtk
     gnome-themes-extra
-    papirus-icon-theme
   ];
 
   fonts.fontconfig.enable = true;
@@ -312,10 +311,7 @@
           variant = "mocha";
     };
   };
-  iconTheme = {
-    name = "Papirus-Dark";
-    package = pkgs.papirus-icon-theme;
-  };
+
   cursorTheme = {
     name = "Catppuccin-Mocha-Dark-Cursors";
     package = pkgs.catppuccin-cursors.mochaDark;
