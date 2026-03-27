@@ -37,7 +37,10 @@
     wlogout
     vlc
     discord
-    telegram
+    telegram-desktop
+    discord
+    btop
+    obsidian
   ];
 
   fonts.fontconfig.enable = true;
