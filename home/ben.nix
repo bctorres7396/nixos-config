@@ -42,6 +42,7 @@
     btop
     obsidian
     mako
+    libnotify
   ];
 
   fonts.fontconfig.enable = true;
