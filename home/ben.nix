@@ -311,7 +311,7 @@
           accents = [ "blue" ];
           variant = "mocha";
     };
-  };
+
   iconTheme = {
     name = "Papirus-Dark";
     package = pkgs.papirus-icon-theme;
@@ -321,4 +321,5 @@
     package = pkgs.catppuccin-cursors.mochaDark;
   };
 };
+
 }
