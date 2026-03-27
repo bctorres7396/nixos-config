@@ -294,9 +294,6 @@
     }
   '';
 };  
-    programs.wofi = {
-    ...
-  };
 
   services.mako = {
     enable = true;
