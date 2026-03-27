@@ -94,6 +94,7 @@
         "SUPER, L, exec, swaylock"
         "SUPER, X, exec, wlogout"
         "SUPER, N, exec, swaync-client -t"
+        "SUPER, F, exec, thunar"
       ];
       decoration = {
         rounding = 10;
