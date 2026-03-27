@@ -46,6 +46,7 @@
     libnotify
     catppuccin-gtk
     gnome-themes-extra
+    glib
   ];
 
   fonts.fontconfig.enable = true;
