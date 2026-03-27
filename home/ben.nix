@@ -41,7 +41,7 @@
     discord
     btop
     obsidian
-    dunst
+    swaynotificationcenter
     libnotify
   ];
 
@@ -55,7 +55,7 @@
         "swww-daemon"
         "sleep 1 && swww img /home/ben/.config/hyprpaper/wallpaper.jpg --transition-type wipe --transition-duration 2"
         "waybar"
-        "dunst"
+        "swaync"
       ];
       general = {
         gaps_in = 5;
@@ -93,6 +93,7 @@
         "SUPER, Z, exec, grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png"
         "SUPER, L, exec, swaylock"
         "SUPER, X, exec, wlogout"
+        "SUPER, N, exec, swaync-client -t"
       ];
       decoration = {
         rounding = 10;
