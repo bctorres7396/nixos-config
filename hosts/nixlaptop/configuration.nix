@@ -137,7 +137,8 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
   programs.zsh.enable = true;
-    users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
+  programs.dconf.enable = true;
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
