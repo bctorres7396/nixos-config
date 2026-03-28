@@ -150,12 +150,12 @@
           tooltip = false;
         };
         network = {
-          format-wifi = " {essid} {signalStrength}% {bandwidthDownBytes} {bandwidthUpBytes}";
-          format-ethernet = {ifname} {bandwidthDownBytes} {bandwidthUpBytes}";
+          format-wifi = " {essid} {signalStrength}%";
+          format-ethernet = " {ifname}";
           format-disconnected = "disconnected";
           interval = 2;
           tooltip = true;
-          tooltip-format = "{ifname} via {gwaddr}";
+          tooltip-format = "{ifname} via {gwaddr} {bandwidthDownBytes} {bandwidthUpBytes}";
         };
         pulseaudio = {
           format = " {volume}%";
