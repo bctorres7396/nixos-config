@@ -193,11 +193,7 @@
       };
     };
   };
-};
-          };
-        };
-      };
-    };
+
     style = ''
   * {
     font-family: "JetBrainsMono Nerd Font";
