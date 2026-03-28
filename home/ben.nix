@@ -132,81 +132,158 @@
   programs.waybar = {
     enable = true;
     settings = {
-      mainBar = {
-        layer = "top";
-        position = "top";
-        height = 34;
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "clock" ];
-        modules-right = [ "network" "pulseaudio" "battery" "clock" ];
-        clock = {
-          format = " {:%H:%M}";
-          format-alt = " {:%A, %B %d, %Y}";
-          tooltip = true;
-          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-        };
-        battery = {
-          format = " {capacity}%";
-          tooltip = false;
-        };
-        network = {
-          format-wifi = " {essid} {signalStrength}%";
-          format-ethernet = " {ifname}";
-          format-disconnected = "disconnected";
-          interval = 2;
-          tooltip = true;
-          tooltip-format = "{ifname} via {gwaddr} {bandwidthDownBytes} {bandwidthUpBytes}";
-        };
-        pulseaudio = {
-          format = " {volume}%";
-          tooltip = false;
-        };
-        "hyprland/workspaces" = {
-          format = "{id}";
-          on-click = "activate";
-          persistent-workspaces = {
-            "*" = 5;
+  mainBar = {
+    layer = "top";
+    position = "top";
+    height = 40;
+    margin-top = 8;
+    margin-left = 8;
+    margin-right = 8;
+    modules-left = [ "hyprland/workspaces" ];
+    modules-center = [ "clock" ];
+    modules-right = [ "cpu" "memory" "pulseaudio" "network" "battery" ];
+
+    clock = {
+      format = " {:%H:%M}";
+      format-alt = " {:%A, %B %d, %Y}";
+      tooltip = true;
+      tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+    };
+
+    battery = {
+      format = "{icon} {capacity}%";
+      format-charging = " {capacity}%";
+      format-icons = [ "" "" "" "" "" ];
+      tooltip = false;
+    };
+
+    network = {
+      format-wifi = " {essid}";
+      format-disconnected = "disconnected";
+      tooltip-format = "{ifname}  {bandwidthDownBytes}  {bandwidthUpBytes}";
+      tooltip = true;
+    };
+
+    pulseaudio = {
+      format = "{icon} {volume}%";
+      format-muted = " muted";
+      format-icons = {
+        default = [ "" "" "" ];
+      };
+      tooltip = false;
+    };
+
+    cpu = {
+      format = " {usage}%";
+      tooltip = false;
+      interval = 2;
+    };
+
+    memory = {
+      format = " {percentage}%";
+      tooltip = false;
+      interval = 2;
+    };
+
+    "hyprland/workspaces" = {
+      format = "{id}";
+      on-click = "activate";
+      persistent-workspaces = {
+        "*" = 5;
+      };
+    };
+  };
+};
           };
         };
       };
     };
     style = ''
-      * {
-        font-family: "JetBrainsMono Nerd Font";
-        font-size: 13px;
-      }
-      window#waybar {
-        background-color: #1e1e2e;
-        color: #cdd6f4;
-        border-bottom: 2px solid #313244;
-      }
-      #workspaces button {
-        padding: 0 8px;
-        color: #6c7086;
-      }
-      #workspaces button.active {
-        color: #89b4fa;
-        border-bottom: 2px solid #89b4fa;
-      }
-      #clock {
-        color: #a6e3a1;
-        padding: 0 12px;
-        font-size: 16px;
-        font-weight: bold;
-      }
-      #battery {
-        color: #f9e2af;
-        padding: 0 12px;
-      }
-      #network {
-        color: #89dceb;
-        padding: 0 12px;
-      }
-      #pulseaudio {
-        color: #f5c2e7;
-        padding: 0 12px;
-      }
-    '';
+  * {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+  }
+
+  window#waybar {
+    background: transparent;
+    border: none;
+  }
+
+  .modules-left, .modules-center, .modules-right {
+    background: #1e1e2e;
+    border-radius: 14px;
+    margin: 8px 4px;
+    padding: 0 8px;
+    border: 2px solid #313244;
+  }
+
+  #workspaces button {
+    padding: 4px 8px;
+    color: #6c7086;
+    border-radius: 10px;
+    margin: 2px;
+  }
+
+  #workspaces button.active {
+    color: #cdd6f4;
+    background: #313244;
+    border-radius: 10px;
+  }
+
+  #workspaces button:hover {
+    background: #313244;
+    border-radius: 10px;
+    color: #cdd6f4;
+  }
+
+  #clock {
+    color: #89b4fa;
+    padding: 0 12px;
+    font-weight: bold;
+  }
+
+  #battery {
+    color: #a6e3a1;
+    padding: 0 12px;
+  }
+
+  #battery.charging {
+    color: #a6e3a1;
+  }
+
+  #battery.warning:not(.charging) {
+    color: #f9e2af;
+  }
+
+  #battery.critical:not(.charging) {
+    color: #f38ba8;
+  }
+
+  #network {
+    color: #89dceb;
+    padding: 0 12px;
+  }
+
+  #pulseaudio {
+    color: #cba6f7;
+    padding: 0 12px;
+  }
+
+  #pulseaudio.muted {
+    color: #6c7086;
+  }
+
+  #cpu {
+    color: #fab387;
+    padding: 0 12px;
+  }
+
+  #memory {
+    color: #f38ba8;
+    padding: 0 12px;
+  }
+'';
   };
 
   programs.kitty = {
@@ -214,11 +291,9 @@
     settings = {
       font_size = "12.0";
       background_opacity = "0.95";
-      background = "#1e1e2e";
-      foreground = "#cdd6f4";
       cursor = "#f5e0dc";
       selection_background = "#313244";
-      color0 = "#45475a";
+     color0 = "#45475a";
       color1 = "#f38ba8";
       color2 = "#a6e3a1";
       color3 = "#f9e2af";
