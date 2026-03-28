@@ -50,10 +50,10 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+    services.pipewire = {
+     enable = true;
+     pulse.enable = true;
+   };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
@@ -139,6 +139,9 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   programs.dconf.enable = true;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
