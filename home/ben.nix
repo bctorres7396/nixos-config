@@ -54,7 +54,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      monitor = ",1920x1080,auto,1";
+      monitor = [",1920x1080,auto,1"
+                "HDMI-A-1,2560x1440,1920x0,1"
+      ];
       exec-once = [
         "swww-daemon"
         "sleep 1 && swww img /home/ben/.config/hyprpaper/wallpaper.jpg --transition-type wipe --transition-duration 2"
