@@ -138,7 +138,7 @@
         height = 34;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "pulseaudio" "network" "battery" ];
+        modules-right = [ "network" "pulseaudio" "battery" "clock" ];
         clock = {
           format = " {:%H:%M}";
           format-alt = " {:%A, %B %d, %Y}";
@@ -150,9 +150,12 @@
           tooltip = false;
         };
         network = {
-          format-wifi = " {signalStrength}%";
+          format-wifi = " {essid} {signalStrength}% {bandwidthDownBytes} {bandwidthUpBytes}";
+          format-ethernet = {ifname} {bandwidthDownBytes} {bandwidthUpBytes}";
           format-disconnected = "disconnected";
-          tooltip = false;
+          interval = 2;
+          tooltip = true;
+          tooltip-format = "{ifname} via {gwaddr}";
         };
         pulseaudio = {
           format = " {volume}%";
