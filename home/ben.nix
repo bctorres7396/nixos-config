@@ -132,7 +132,7 @@
   programs.waybar = {
     enable = true;
     settings = {
-  mainBar = {
+    mainBar = {
     layer = "top";
     position = "top";
     height = 40;
@@ -390,8 +390,7 @@
           accents = [ "blue" ];
           variant = "mocha";
         };
-      };
-    };
+     };
 
   cursorTheme = {
     name = "Catppuccin-Mocha-Dark-Cursors";
