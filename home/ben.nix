@@ -389,16 +389,11 @@
         package = pkgs.catppuccin-gtk;
     };
     cursorTheme = {
-      name = "Catppuccin-Mocha-Dark-Cursors";
+      name = "catppuccin-mocha-dark-cursors";
       package = pkgs.catppuccin-cursors.mochaDark;
-     };
     };
-
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-    gtk-theme = "Catppuccin-Mocha-Standard-Blue-Dark";
-    color-scheme = "prefer-dark";
-  };
-};
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = true;
+   };
    
 }
