@@ -389,8 +389,9 @@
         package = pkgs.catppuccin-gtk.override {
           accents = [ "blue" ];
           variant = "mocha";
+        };
+      };
     };
-  };
 
   cursorTheme = {
     name = "Catppuccin-Mocha-Dark-Cursors";
