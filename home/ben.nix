@@ -386,17 +386,13 @@
       enable = true;
       theme = {
         name = "Catppuccin-Mocha-Standard-Blue-Dark";
-        package = pkgs.catppuccin-gtk.override {
-          accents = [ "blue" ];
-          variant = "mocha";
-        };
+        package = pkgs.catppuccin-gtk;
+    };
+    cursorTheme = {
+      name = "Catppuccin-Mocha-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.mochaDark;
      };
-
-  cursorTheme = {
-    name = "Catppuccin-Mocha-Dark-Cursors";
-    package = pkgs.catppuccin-cursors.mochaDark;
-  };
-};
+    };
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
