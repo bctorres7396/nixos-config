@@ -160,10 +160,10 @@
     };
 
     network = {
-      format-wifi = " {essid}";
+      format-wifi = ''  {essid} {bandwidthDownBits} {bandwidthUpBits}'';
       format-disconnected = "disconnected";
-      tooltip-format = "{ifname}  {bandwidthDownBytes}  {bandwidthUpBytes}";
-      tooltip = true;
+      tooltip = false;
+      interval = 2;
     };
 
     pulseaudio = {
