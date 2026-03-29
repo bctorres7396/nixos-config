@@ -193,92 +193,93 @@
       };
     };
   };
+};
 
     style = ''
-  * {
+    {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
     min-height: 0;
-  }
+    };
 
   window#waybar {
     background: transparent;
     border: none;
-  }
+    };
 
-  .modules-left, .modules-center, .modules-right {
+    modules-left, .modules-center, .modules-right {
     background: #1e1e2e;
     border-radius: 14px;
     margin: 8px 4px;
     padding: 0 8px;
     border: 2px solid #313244;
-  }
+    };
 
   #workspaces button {
     padding: 4px 8px;
     color: #6c7086;
     border-radius: 10px;
     margin: 2px;
-  }
+  };
 
   #workspaces button.active {
     color: #cdd6f4;
     background: #313244;
     border-radius: 10px;
-  }
+  };
 
   #workspaces button:hover {
     background: #313244;
     border-radius: 10px;
     color: #cdd6f4;
-  }
+  };
 
   #clock {
     color: #89b4fa;
     padding: 0 12px;
     font-weight: bold;
-  }
+  };
 
   #battery {
     color: #a6e3a1;
     padding: 0 12px;
-  }
+  };
 
   #battery.charging {
     color: #a6e3a1;
-  }
+  };
 
   #battery.warning:not(.charging) {
     color: #f9e2af;
-  }
+  };
 
   #battery.critical:not(.charging) {
     color: #f38ba8;
-  }
+  };
 
   #network {
     color: #89dceb;
     padding: 0 12px;
-  }
+  };
 
   #pulseaudio {
     color: #cba6f7;
     padding: 0 12px;
-  }
+  };
 
   #pulseaudio.muted {
     color: #6c7086;
-  }
+  };
 
   #cpu {
     color: #fab387;
     padding: 0 12px;
-  }
+  };
 
   #memory {
     color: #f38ba8;
     padding: 0 12px;
-  }
+  };
 '';
   };
 
