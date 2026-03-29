@@ -196,11 +196,11 @@
 };
 
     style = ''
-    {
+    * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
     min-height: 0;
-    };
+    }
 
   window#waybar {
     background: transparent;
