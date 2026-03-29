@@ -152,13 +152,13 @@
 
     battery = {
       format = "{icon} {capacity}%";
-      format-charging = "\uf0e7 {capacity}%";
-      format-icons = [ "\uf244" "uf243" "\uf242" "\uf241" "\uf240" ];
+      format-charging = " {capacity}%";
+      format-icons = [ "" "uf243" "" "" "" ];
       tooltip = false;
     };
 
     network = {
-      format-wifi = "\uf1eb {essid}";
+      format-wifi = " {essid}";
       format-disconnected = "disconnected";
       tooltip-format = "{ifname}  {bandwidthDownBytes}  {bandwidthUpBytes}";
       tooltip = true;
@@ -166,21 +166,21 @@
 
     pulseaudio = {
       format = "{icon} {volume}%";
-      format-muted = "\uf026 muted";
+      format-muted = " muted";
       format-icons = {
-        default = [ "\uf026" "\uf027" "\uf028" ];
+        default = [ "" "" "" ];
       };
       tooltip = false;
     };
 
     cpu = {
-      format = "\uf4bc {usage}%";
+      format = " {usage}%";
       tooltip = false;
       interval = 2;
     };
 
     memory = {
-      format = "\uf538 {percentage}%";
+      format = " {percentage}%";
       tooltip = false;
       interval = 2;
     };
