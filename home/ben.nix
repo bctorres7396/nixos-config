@@ -105,6 +105,8 @@
         "SUPER, X, exec, wlogout"
         "SUPER, N, exec, swaync-client -t"
         "SUPER, F, exec, thunar"
+        "SUPER, F11, fullscreen, 0"
+        "SUPER, F10, fullscreen, 1"
       ];
       decoration = {
         rounding = 10;
