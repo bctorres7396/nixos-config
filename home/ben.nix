@@ -136,7 +136,7 @@
     layer = "top";
     position = "top";
     height = 40;
-    margin-top = 8;
+    margin-top = 6;
     margin-left = 8;
     margin-right = 8;
     modules-left = [ "hyprland/workspaces" ];
@@ -200,6 +200,7 @@
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
     min-height: 0;
+    color: #cdd6f4;
     }
 
   window#waybar {
