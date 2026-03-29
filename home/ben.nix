@@ -205,9 +205,9 @@
   window#waybar {
     background: transparent;
     border: none;
-    };
+    }
 
-    modules-left, .modules-center, .modules-right {
+    .modules-left, .modules-center, .modules-right {
     background: #1e1e2e;
     border-radius: 14px;
     margin: 8px 4px;
