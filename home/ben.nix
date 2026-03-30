@@ -168,7 +168,7 @@
 
     bluetooth = {
       format = " {status}";
-      format-connected " {device_alias}";
+      format-connected = " {device_alias}";
       tooltip = false;
       on-click "blueman-manager";
     };
