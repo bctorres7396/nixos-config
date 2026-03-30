@@ -143,7 +143,7 @@
     margin-right = 8;
     modules-left = [ "hyprland/workspaces" ];
     modules-center = [ "clock" ];
-    modules-right = [ "cpu" "memory" "pulseaudio" "network" "battery" ];
+    modules-right = [ "cpu" "memory" "pulseaudio" "network" "bluetooth" "tray" "battery" ];
 
     clock = {
       format = " {:%H:%M}";
@@ -165,6 +165,14 @@
       tooltip = false;
       interval = 2;
     };
+
+    bluetooth = {
+      format = " {status}";
+      format-connected " {device_alias}";
+      tooltip = false;
+      on-click "blueman-manager";
+    };
+      
 
     pulseaudio = {
       format = "{icon} {volume}%";
