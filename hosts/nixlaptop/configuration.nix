@@ -77,7 +77,10 @@
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
      git
+     kdePackages.dolphin
    ];
+
+  services.gvfs.enable = true; # enables trash, network browsing etc
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -142,7 +145,20 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
+
+  # Security hardening
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ ];
+  boot.loader.systemd-boot.editor = false;
+  security.sudo.wheelNeedsPassword = true;
+  boot.kernel.sysctl = {
+    "kernel.dmesg_restrict" = 1;
+    "net.ipv4.conf.all.rp_filter" = 1;
+    "net.ipv4.tcp_syncookies" = 1;
+  };
+
   system.stateVersion = "25.11"; # Did you read the comment?
+  
 
 }
 
