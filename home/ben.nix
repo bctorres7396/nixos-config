@@ -170,7 +170,7 @@
       format = " {status}";
       format-connected = " {device_alias}";
       tooltip = false;
-      on-click "blueman-manager";
+      on-click = "blueman-manager";
     };
       
 
