@@ -156,7 +156,14 @@
     "net.ipv4.conf.all.rp_filter" = 1;
     "net.ipv4.tcp_syncookies" = 1;
   };
-
+  
+  system.autoUpgrade = {
+  enable = true;
+  flake = "github:bctorres7396/nixos-config#nixlaptop";
+  flags = [ "--no-write-lock-file" ];
+  dates = "weekly";
+  randomizedDelaySec = "45min";
+  };
   system.stateVersion = "25.11"; # Did you read the comment?
   
 
