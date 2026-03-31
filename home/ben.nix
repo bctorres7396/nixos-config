@@ -46,6 +46,8 @@
     catppuccin-gtk
     gnome-themes-extra
     glib
+    protonvpn-gui
+
   ];
 
   fonts.fontconfig.enable = true;
